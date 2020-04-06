@@ -1,0 +1,8 @@
+const NAVIGATION_TYPE = {
+    HOME:1,
+    ABOUT:2,
+    PORTFOLIO:3,
+    BLOG:4,
+    CONTACT:5,
+  }
+export {NAVIGATION_TYPE}

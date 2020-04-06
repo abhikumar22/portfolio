@@ -1,0 +1,54 @@
+@font-face {
+  font-family: "BalooThambi";
+  src: url("../fonts/BalooThambi2-Regular.ttf");
+}
+@font-face {
+  font-family: "BalooThambiExtraBold";
+  src: url("../fonts/BalooThambi2-ExtraBold.ttf");
+}
+@font-face {
+  font-family: "BalooThambiBold";
+  src: url("../fonts/BalooThambi2-Bold.ttf");
+}
+
+*{
+  scroll-behavior: smooth;
+  font-family:BalooThambi !important;
+}
+.abhi:hover {
+  color: rgb(211, 42, 121) !important;
+}
+
+.userhandle {
+  font-size: 30px;
+}
+
+.first {
+  background-image: url("../images/ABHI1.jpg"); /* The image used */
+  background-color: #cccccc; /* Used if the image is unavailable */
+  /* height: 500px;  You must set a specified height */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+  height: 100vh;
+  background-color: #241e19;
+}
+.pnk {
+  color: rgb(231, 36, 127);
+  font-size: 18px
+}
+.pnk2 {
+  font-size: 14px;
+}
+
+
+
+.font2 {
+  font-family: BalooThambiBold;
+  font-weight: bolder;
+  font-size: large;
+}
+
+.cursorPointer{
+  cursor:pointer;
+}
