@@ -32,8 +32,8 @@ export default class App extends React.Component {
           {/* <NavigationComponent/> */}
           <div className="pt-1">
             <nav className="navbar navbar-expand-lg navbar-dark">
-              <div className="d-flex flex-grow justify-content-center align-items-center">
-                <span className="w-100 d-lg-none d-block"></span>
+              <div className="w-100 d-flex flex-grow justify-content-center align-items-center">
+                {/* <span className="w-100 d-lg-none d-block"></span> */}
                 <img src={logo} style={{ height: 35, width: 35 }} alt="Logo" />
                 <span
                   className="navbar-brand userhandle ml-2 font-weight-bold"
@@ -53,7 +53,7 @@ export default class App extends React.Component {
                 </div>
               </div>
               <div
-                className="collapse navbar-collapse flex-grow-1 text-right"
+                className="collapse navbar-collapse text-right"
                 id="myNavbar7"
               >
                 <ul className="navbar-nav ml-auto flex-nowrap">
