@@ -10,8 +10,6 @@ import Blog from "../component/Blog";
 import Contact from "../component/Contact";
 import Portfolio from "../component/Portfolio";
 
-
-
 export default class App extends React.Component {
   constructor(props) {
     super(props);
@@ -112,7 +110,19 @@ export default class App extends React.Component {
             </nav>
           </div>
           {/* <HomeComponent /> */}
-          {this.state.currentNavigation===1?<HomeComponent/>:this.state.currentNavigation===2?<About/>:this.state.currentNavigation===3?<Portfolio/>:this.state.currentNavigation===4?<Blog/>:<Contact/>}
+          <div className="container">
+            {this.state.currentNavigation === 1 ? (
+              <HomeComponent />
+            ) : this.state.currentNavigation === 2 ? (
+              <About />
+            ) : this.state.currentNavigation === 3 ? (
+              <Portfolio />
+            ) : this.state.currentNavigation === 4 ? (
+              <Blog />
+            ) : (
+              <Contact />
+            )}
+          </div>
         </div>
       </div>
     );

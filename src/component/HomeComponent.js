@@ -2,12 +2,12 @@ import React from "react";
 
 export default function Home() {
   return (
-    <div className="row ml-3">
+    <div className="row">
       <div className="col-sm-12 col-lg-6 py-3">
         <p className="pt-3 pnk">- I am</p>
         <p className="display-4 nm text-white">Abhishek kumar</p>
         <p className="pnk">Software Engineer</p>
-        <p className="pnk2 text-white">
+        <p className="pnk2 text-white text-justify mr-4">
           Proven IT Professional with experience of 1.9+ years in Software
           Development & Project implementation, mainly focusing on business
           analysis, design, development of large-scalable application.
