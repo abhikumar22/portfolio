@@ -25,7 +25,7 @@ export default class About extends Component {
     window.open(url);
   }
 
-  
+
   render() {
     return (
       <div className="py-3 col-sm-12 col-lg-6">
@@ -101,7 +101,7 @@ export default class About extends Component {
                 <span>Send Email</span>
               </button>
             </div>
-            <div className="py-1">
+            <div className="py-3 ml-2">
               <div className="col mx-auto justify-content-center">
                 <SocialMediaComponent
                   type={1}
