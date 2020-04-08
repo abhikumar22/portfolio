@@ -2,10 +2,10 @@ import React from "react";
 import "../assets/css/style.css";
 import NavigationComponent from "../component/NavigationComponent";
 import logo from "../assets/images/marvel.png";
-import { NAVIGATION_TYPE } from "../utils/constants";
+import { NAVIGATION_TYPE, NAVIGATION_TYPE_NAME } from "../utils/constants";
 
 import HomeComponent from "../component/HomeComponent";
-import About from "../component/About";
+import MySkills from "../component/MySkills";
 import Blog from "../component/Blog";
 import Contact from "../component/Contact";
 import Portfolio from "../component/Portfolio";
@@ -15,12 +15,22 @@ export default class App extends React.Component {
     super(props);
     this.state = {
       currentNavigation: 1,
+      toShowTitle: true,
+      navigationTitle: "",
     };
   }
   setNavigationType(value) {
-    this.setState({ currentNavigation: value }, () => {
-      console.log("lopp", this.state.currentNavigation);
-    });
+    this.setState(
+      {
+        toShowTitle: false,
+        navigationTitle: NAVIGATION_TYPE_NAME[value-1],
+      },
+      () => {
+        this.setState({ currentNavigation: value }, () => {
+          console.log("lopp", this.state.currentNavigation);
+        });
+      }
+    );
   }
 
   render() {
@@ -31,14 +41,26 @@ export default class App extends React.Component {
           <div className="pt-1">
             <nav className="navbar navbar-expand-lg navbar-dark">
               <div className="w-100 d-flex flex-grow justify-content-center align-items-center">
-                {/* <span className="w-100 d-lg-none d-block"></span> */}
-                <img src={logo} style={{ height: 35, width: 35 }} alt="Logo" />
-                <span
-                  className="navbar-brand userhandle ml-2 font-weight-bold"
-                  href="#"
-                >
-                  abhikumar22
-                </span>
+                {this.state.toShowTitle ? (
+                  // <img
+                  //   src={logo}
+                  //   style={{ height: 35, width: 35 }}
+                  //   alt="Logo"
+                  // />
+                  <span
+                    className="navbar-brand userhandle ml-2 font-weight-bold"
+                    href="#"
+                  >
+                    abhikumar22
+                  </span>
+                ) : (
+                  <span
+                    className="navbar-brand userhandle ml-2 font-weight-bold"
+                    href="#"
+                  >
+                    {this.state.navigationTitle}
+                  </span>
+                )}
                 <div className="w-100 text-right">
                   <button
                     className="navbar-toggler"
@@ -68,11 +90,11 @@ export default class App extends React.Component {
                   <li
                     className="nav-item px-2"
                     onClick={() => {
-                      this.setNavigationType(NAVIGATION_TYPE.ABOUT);
+                      this.setNavigationType(NAVIGATION_TYPE.MySkills);
                     }}
                   >
                     <span className="nav-link text-white abhi font2 cursorPointer">
-                      About
+                    MySkills
                     </span>
                   </li>
                   <li
@@ -111,22 +133,22 @@ export default class App extends React.Component {
           </div>
           {/* <HomeComponent /> */}
           <div className="container">
-            {this.state.currentNavigation === 1 ? (
+            {this.state.currentNavigation === NAVIGATION_TYPE.HOME ? (
               <HomeComponent />
-            ) : this.state.currentNavigation === 2 ? (
-              <About />
-            ) : this.state.currentNavigation === 3 ? (
+            ) : this.state.currentNavigation === NAVIGATION_TYPE.MySkills ? (
+              <MySkills />
+            ) : this.state.currentNavigation === NAVIGATION_TYPE.PORTFOLIO ? (
               <Portfolio />
-            ) : this.state.currentNavigation === 4 ? (
+            ) : this.state.currentNavigation === NAVIGATION_TYPE.BLOG ? (
               <Blog />
             ) : (
               <Contact />
             )}
-            <div className="text-white mt-2">
+            {/* <div className="text-white mt-2">
               <div className="copyright">
                 <span>© Copyright abhikumar22 2020</span>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

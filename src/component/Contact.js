@@ -35,7 +35,7 @@ export default class About extends Component {
             action="https://formspree.io/abhi.ckp1002@gmail.com"
             method="POST"
           >
-            <h3 className="text-white mb-3">Get in touch</h3>
+            {/* <h3 className="text-white mb-3">Get in touch</h3> */}
 
             {/* <div
               className="wrap-input1 validate-input"
@@ -156,13 +156,13 @@ export default class About extends Component {
               <div className="row text-white mt-4">
                   <div className="col">
                     <AiOutlineMail color={"white"} size={"2em"} />
-                    <h3 className="mt-1">Email</h3>
+                    <h3 className="mt-1">EMAIL</h3>
                     <h6 className="mt-1">abhikr281@gmail.com</h6>
 
                 </div>
                   <div className="col">
                     <MdCall color={"white"} size={"2em"} />
-                    <h3 className="mt-1">Call</h3>
+                    <h3 className="mt-1">CALL</h3>
                     <h6 className="mt-1">+918342962927</h6>
 
                 </div>
