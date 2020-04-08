@@ -3,9 +3,10 @@ import "../assets/css/contact/main.css";
 import "../assets/css/contact/util.css";
 import SocialMediaComponent from "../component/SocialMediaComponent";
 import { SOCIAL_URL } from "../utils/constants";
+import { AiOutlineMail } from "react-icons/ai";
+import { MdCall } from "react-icons/md";
 
 export default class About extends Component {
-
   handleSocialClick(val) {
     let url =
       val === 1
@@ -24,7 +25,6 @@ export default class About extends Component {
 
     window.open(url);
   }
-
 
   render() {
     return (
@@ -151,50 +151,21 @@ export default class About extends Component {
                   className="cursorPointer col col-sm col-lg col-xl col-md"
                   style={{ width: "auto" }}
                 >
-                  {/* <FaGithub color={"white"} size={"1.2em"} /> */}
                 </div>
-                {/* <div
-                className="cursorPointer col col-sm col-lg col-xl col-md"
-                onClick={() => {}}
-                style={{ width: "auto" }}
-              >
-                <FaFacebookF color={"white"} size={"1.2em"} />
               </div>
-              <div
-                className="cursorPointer col col-sm col-lg col-xl col-md"
-                onClick={() => {}}
-                style={{ width: "auto" }}
-              >
-                <FaLinkedinIn color={"white"} size={"1.2em"} />
-              </div>
-              <div
-                className="cursorPointer col col-sm col-lg col-xl col-md"
-                onClick={() => {}}
-                style={{ width: "auto" }}
-              >
-                <FaTwitter color={"white"} size={"1.2em"} />
-              </div>
-              <div
-                className="cursorPointer col col-sm col-lg col-xl col-md"
-                onClick={() => {}}
-                style={{ width: "auto" }}
-              >
-                <FaMediumM color={"white"} size={"1.2em"} />
-              </div>
-              <div
-                className="cursorPointer col col-sm col-lg col-xl col-md"
-                onClick={() => {}}
-                style={{ width: "auto" }}
-              >
-                <FaStackOverflow color={"white"} size={"1.2em"} />
-              </div>
-              <div
-                className="cursorPointer col col-sm col-lg col-xl col-md"
-                onClick={() => {}}
-                style={{ width: "auto" }}
-              >
-                <FaInstagram color={"white"} size={"1.2em"} />
-              </div> */}
+              <div className="row text-white mt-4">
+                  <div className="col">
+                    <AiOutlineMail color={"white"} size={"2em"} />
+                    <h3 className="mt-1">Email</h3>
+                    <h6 className="mt-1">abhikr281@gmail.com</h6>
+
+                </div>
+                  <div className="col">
+                    <MdCall color={"white"} size={"2em"} />
+                    <h3 className="mt-1">Call</h3>
+                    <h6 className="mt-1">+918342962927</h6>
+
+                </div>
               </div>
             </div>
           </form>

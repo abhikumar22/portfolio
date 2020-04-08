@@ -122,6 +122,11 @@ export default class App extends React.Component {
             ) : (
               <Contact />
             )}
+            <div className="text-white mt-2">
+              <div className="copyright">
+                <span>© Copyright abhikumar22 2020</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>

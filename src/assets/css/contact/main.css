@@ -176,7 +176,7 @@ iframe {
   cursor:pointer;
   line-height: 300%;
   display: inline-block;
-  margin: 0 10px;
+  margin: 0 11px;
   width: auto;
   padding: 0
   
@@ -207,18 +207,18 @@ iframe {
 }
 
 input.input1 {
-  height: 50px;
+  height: 40px;
   border-radius: 25px;
-  padding: 0 30px;
+  padding: 0 20px;
 }
 input.input1 + .shadow-input1 {
   border-radius: 25px;
 }
 
 textarea.input1 {
-  min-height: 150px;
+  min-height: 120px;
   border-radius: 25px;
-  padding: 12px 30px;
+  padding: 12px 20px;
 }
 textarea.input1 + .shadow-input1 {
   border-radius: 25px;
