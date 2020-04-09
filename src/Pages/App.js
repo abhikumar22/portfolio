@@ -1,7 +1,5 @@
 import React from "react";
 import "../assets/css/style.css";
-import NavigationComponent from "../component/NavigationComponent";
-import logo from "../assets/images/marvel.png";
 import { NAVIGATION_TYPE, NAVIGATION_TYPE_NAME } from "../utils/constants";
 
 import HomeComponent from "../component/HomeComponent";
@@ -10,25 +8,36 @@ import Blog from "../component/Blog";
 import Contact from "../component/Contact";
 import Portfolio from "../component/Portfolio";
 
+
+
 export default class App extends React.Component {
+  
   constructor(props) {
     super(props);
     this.state = {
       currentNavigation: 1,
       toShowTitle: true,
       navigationTitle: "",
+      checked: true,
     };
   }
   setNavigationType(value) {
     this.setState(
       {
+        checked: false,
         toShowTitle: false,
-        navigationTitle: NAVIGATION_TYPE_NAME[value-1],
+        navigationTitle: NAVIGATION_TYPE_NAME[value - 1],
       },
       () => {
-        this.setState({ currentNavigation: value }, () => {
-          console.log("lopp", this.state.currentNavigation);
-        });
+        this.setState(
+          {
+            checked: true,
+            currentNavigation: value,
+          },
+          () => {
+            // console.log("lopp", this.state.currentNavigation);
+          }
+        );
       }
     );
   }
@@ -39,7 +48,7 @@ export default class App extends React.Component {
         <div className="container">
           {/* <NavigationComponent/> */}
           <div className="pt-1">
-            <nav className="navbar navbar-expand-lg navbar-dark">
+            <nav className="navbar navbar-expand-lg navbar-dark abs">
               <div className="w-100 d-flex flex-grow justify-content-center align-items-center">
                 {this.state.toShowTitle ? (
                   // <img
@@ -94,7 +103,7 @@ export default class App extends React.Component {
                     }}
                   >
                     <span className="nav-link text-white abhi font2 cursorPointer">
-                    MySkills
+                      MySkills
                     </span>
                   </li>
                   <li
@@ -132,24 +141,36 @@ export default class App extends React.Component {
             </nav>
           </div>
           {/* <HomeComponent /> */}
-          <div className="container">
-            {this.state.currentNavigation === NAVIGATION_TYPE.HOME ? (
-              <HomeComponent />
-            ) : this.state.currentNavigation === NAVIGATION_TYPE.MySkills ? (
-              <MySkills />
-            ) : this.state.currentNavigation === NAVIGATION_TYPE.PORTFOLIO ? (
-              <Portfolio />
-            ) : this.state.currentNavigation === NAVIGATION_TYPE.BLOG ? (
-              <Blog />
-            ) : (
-              <Contact />
-            )}
-            {/* <div className="text-white mt-2">
+          
+            <div className="container">
+            {/* <Slide
+            direction="left"
+            in={this.state.checked}
+            // mountOnEnter
+            // unmountOnExit
+          > */}
+            <div>
+              {this.state.currentNavigation === NAVIGATION_TYPE.HOME ? (
+                <HomeComponent />
+              ) : this.state.currentNavigation === NAVIGATION_TYPE.MySkills ? (
+                <MySkills />
+              ) : this.state.currentNavigation === NAVIGATION_TYPE.PORTFOLIO ? (
+                <Portfolio />
+              ) : this.state.currentNavigation === NAVIGATION_TYPE.BLOG ? (
+                <Blog />
+              ) : (
+                <Contact />
+              )}
+              </div>
+          {/* </Slide> */}
+
+              {/* <div className="text-white mt-2">
               <div className="copyright">
                 <span>© Copyright abhikumar22 2020</span>
               </div>
             </div> */}
-          </div>
+              
+            </div>
         </div>
       </div>
     );

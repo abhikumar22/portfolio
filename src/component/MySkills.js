@@ -6,10 +6,19 @@ import {
 import "../assets/css/about/style.css";
 import "../assets/css/about/custom.css";
 import { FaPython, FaReact, FaDatabase } from "react-icons/fa";
+import { Slide } from "@material-ui/core";
+
 const percentage = 66;
+
 
 export default function MySkills() {
   return (
+    <Slide
+    direction="left"
+    in={true}
+    // mountOnEnter
+    // unmountOnExit
+  >
     <div className="text-center col-sm-12 col-lg-6">
       <div className="py-5 text-white">
         <div className="row">
@@ -51,5 +60,6 @@ export default function MySkills() {
         <h5>Additional skills</h5>
       </div>
     </div>
+  </Slide>
   );
 }

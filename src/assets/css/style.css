@@ -54,3 +54,9 @@
 .cursorPointer{
   cursor:pointer;
 }
+
+
+@media only screen and (max-width : 992px) {
+  /* .navbar-collapse li  { background-color: green; 
+  position: absolute;;} */
+}

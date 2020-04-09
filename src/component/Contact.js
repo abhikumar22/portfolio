@@ -5,6 +5,7 @@ import SocialMediaComponent from "../component/SocialMediaComponent";
 import { SOCIAL_URL } from "../utils/constants";
 import { AiOutlineMail } from "react-icons/ai";
 import { MdCall } from "react-icons/md";
+import { Slide } from "@material-ui/core";
 
 export default class About extends Component {
   handleSocialClick(val) {
@@ -28,6 +29,12 @@ export default class About extends Component {
 
   render() {
     return (
+      <Slide
+      direction="left"
+      in={true}
+      // mountOnEnter
+      // unmountOnExit
+    >
       <div className="py-3 col-sm-12 col-lg-6">
         <div className="py-1 justify-content-md-center">
           <form
@@ -171,6 +178,7 @@ export default class About extends Component {
           </form>
         </div>
       </div>
+      </Slide>
     );
   }
 }

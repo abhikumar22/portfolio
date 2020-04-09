@@ -1,7 +1,14 @@
 import React from "react";
+import { Slide } from "@material-ui/core";
 
 export default function Home() {
   return (
+    <Slide
+    direction="left"
+    in={true}
+    // mountOnEnter
+    // unmountOnExit
+  >
     <div className="row">
       <div className="col-sm-12 col-lg-6 py-3">
         <p className="pt-3 pnk">- I am</p>
@@ -24,5 +31,6 @@ export default function Home() {
         </button>
       </div>
     </div>
+    </Slide>
   );
 }
