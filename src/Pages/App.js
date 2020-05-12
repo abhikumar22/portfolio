@@ -48,7 +48,7 @@ export default class App extends React.Component {
         <div className="container">
           {/* <NavigationComponent/> */}
           <div className="pt-1">
-            <nav className="navbar navbar-expand-lg navbar-dark abs">
+            <nav className="navbar navbar-expand-lg navbar-dark abs fixed-top">
               <div className="w-100 d-flex flex-grow justify-content-center align-items-center">
                 {this.state.toShowTitle ? (
                   // <img
@@ -82,11 +82,12 @@ export default class App extends React.Component {
                 </div>
               </div>
               <div
-                className="collapse navbar-collapse text-right"
+                className="collapse navbar-collapse text-right "
                 id="myNavbar7"
               >
                 <ul className="navbar-nav ml-auto flex-nowrap">
                   <li
+                  data-toggle="collapse" data-target=".navbar-collapse.show"
                     className="nav-item px-2"
                     onClick={() => {
                       this.setNavigationType(NAVIGATION_TYPE.HOME);
@@ -97,6 +98,7 @@ export default class App extends React.Component {
                     </span>
                   </li>
                   <li
+                  data-toggle="collapse" data-target=".navbar-collapse.show"
                     className="nav-item px-2"
                     onClick={() => {
                       this.setNavigationType(NAVIGATION_TYPE.MySkills);
@@ -107,6 +109,7 @@ export default class App extends React.Component {
                     </span>
                   </li>
                   <li
+                  data-toggle="collapse" data-target=".navbar-collapse.show"
                     className="nav-item px-2"
                     onClick={() => {
                       this.setNavigationType(NAVIGATION_TYPE.PORTFOLIO);
@@ -117,6 +120,7 @@ export default class App extends React.Component {
                     </span>
                   </li>
                   <li
+                  data-toggle="collapse" data-target=".navbar-collapse.show"
                     className="nav-item px-2"
                     onClick={() => {
                       this.setNavigationType(NAVIGATION_TYPE.BLOG);
@@ -127,6 +131,7 @@ export default class App extends React.Component {
                     </span>
                   </li>
                   <li
+                  data-toggle="collapse" data-target=".navbar-collapse.show"
                     className="nav-item px-2"
                     onClick={() => {
                       this.setNavigationType(NAVIGATION_TYPE.CONTACT);
@@ -142,7 +147,7 @@ export default class App extends React.Component {
           </div>
           {/* <HomeComponent /> */}
           
-            <div className="container">
+            <div className="container rel mt-5">
             {/* <Slide
             direction="left"
             in={this.state.checked}

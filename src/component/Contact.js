@@ -12,15 +12,15 @@ export default class About extends Component {
     let url =
       val === 1
         ? SOCIAL_URL.GITHUB
-        : val == 2
+        : val === 2
         ? SOCIAL_URL.FACEBOOK
-        : val == 3
+        : val === 3
         ? SOCIAL_URL.LINKEDIN
-        : val == 4
+        : val === 4
         ? SOCIAL_URL.TWITTER
-        : val == 5
+        : val === 5
         ? SOCIAL_URL.STACKOVERFLOW
-        : val == 6
+        : val === 6
         ? SOCIAL_URL.INSTAGRAM
         : SOCIAL_URL.MEDIUM;
 

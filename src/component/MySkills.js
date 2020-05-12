@@ -1,14 +1,11 @@
 import React from "react";
 import {
   CircularProgressbarWithChildren,
-  CircularProgressbar,
 } from "react-circular-progressbar";
 import "../assets/css/about/style.css";
 import "../assets/css/about/custom.css";
 import { FaPython, FaReact, FaDatabase } from "react-icons/fa";
 import { Slide } from "@material-ui/core";
-
-const percentage = 66;
 
 
 export default function MySkills() {

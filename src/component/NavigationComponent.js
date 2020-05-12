@@ -4,7 +4,7 @@ import logo from "../assets/images/marvel.png";
 export default function Car() {
   return (
     <div className="pt-1">
-      <nav className="navbar navbar-expand-lg navbar-dark">
+      <nav className="navbar navbar-expand-lg navbar-dark fixed-top">
         <div className="d-flex flex-grow justify-content-center align-items-center">
           <span className="w-100 d-lg-none d-block"></span>
           <img src={logo} style={{ height: 35, width: 35 }} alt="Logo" />
